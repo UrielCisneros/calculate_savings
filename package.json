@@ -1,0 +1,20 @@
+{
+  "name": "calculate_money",
+  "version": "1.0.0",
+  "description": "simulate od calculate money to ahorros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UrielCisneros/calculate_savings.git"
+  },
+  "author": "Uriel Cisneros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UrielCisneros/calculate_savings/issues"
+  },
+  "homepage": "https://github.com/UrielCisneros/calculate_savings#readme"
+}
