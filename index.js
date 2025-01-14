@@ -28,6 +28,6 @@ for (let i = 0; i < YEARS_OF_SAVING; i++) {
 console.table({
   Ahorros: `$${formatMoney(parseFloat(saving_calculate_years.toFixed(2)))}`,
   Años: YEARS_OF_SAVING,
-  Ganancia: `$${formatMoney(parseFloat((saving_calculate_years - SAVINGS_NOW - (SAVINGS_YEARS * YEARS_OF_SAVING) )).toFixed(2))}`
+  Ganancia: `$${formatMoney(calculate_gain(saving_calculate_years, YEARS_OF_SAVING))}`
 })
 
