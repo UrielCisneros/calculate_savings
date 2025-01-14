@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/UrielCisneros/calculate_savings/issues"
   },
-  "homepage": "https://github.com/UrielCisneros/calculate_savings#readme"
+  "homepage": "https://github.com/UrielCisneros/calculate_savings#readme",
+  "dependencies": {
+    "currency-formatter": "^1.5.9"
+  }
 }
