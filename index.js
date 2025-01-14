@@ -11,6 +11,8 @@ const ANNUAL_INTEREST = 0.09; //Interes que ganaras anual
 
 const formatMoney = amount => currencyFormatter.format(amount, { code: 'MX' });
 
+const calculate_gain = (saving_for_now, year) => parseFloat((saving_for_now - SAVINGS_NOW - (year * YEARS_OF_SAVING)));
+
 let saving_calculate_years = SAVINGS_NOW;
 
 for (let i = 0; i < YEARS_OF_SAVING; i++) {
@@ -18,13 +20,14 @@ for (let i = 0; i < YEARS_OF_SAVING; i++) {
     saving_calculate_years += SAVINGS_YEARS;
     console.table({
       Ahorro_por_año:  `$${formatMoney(parseFloat(saving_calculate_years.toFixed(2)))}`,
-      Año_de_ahorro :i + 1
+      Año_de_ahorro :i + 1,
+      Ganancia: `$${formatMoney(calculate_gain(saving_calculate_years, i + 1))}`
     });
 }
 
 console.table({
   Ahorros: `$${formatMoney(parseFloat(saving_calculate_years.toFixed(2)))}`,
   Años: YEARS_OF_SAVING,
-  Ganancia: `$${formatMoney(parseFloat(saving_calculate_years - 4000 - (SAVINGS_YEARS * YEARS_OF_SAVING)).toFixed(2))}`
+  Ganancia: `$${formatMoney(parseFloat((saving_calculate_years - SAVINGS_NOW - (SAVINGS_YEARS * YEARS_OF_SAVING) )).toFixed(2))}`
 })
 
